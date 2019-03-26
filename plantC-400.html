@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+
+       <div id="container-plantC" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZvQywLjYzTLf51DlgAMSObACnpmPCMka&__ec_v__=15848160"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom3 = document.getElementById("container-plantC");
+var myChart = echarts.init(dom3);
+var app = {};
+option = null;
+app.title = 'Assembly Line Dashboard';
+
+option = {
+    title: {
+        text: 'Scrap Condition - PlantC',
+        subtext: 'Based on RESULT_STATE'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['1(Good Part)', '2(Scrap Part)']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.1]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Line2','Line1','Total Product Number']
+    },
+    series: [
+        {
+            name: '1(Good Part)',
+            type: 'bar',
+            data: [23440,11737,35177]
+        },
+        {
+            name: '2(Scrap Part)',
+            type: 'bar',
+            data: [560,263,823]
+        }
+    ]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard!</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+
+<body class="clearfloat">
+   <h1 class='title'>Assembly Line KPIs Dashboard</h1>
+   <a href="./use.html" target="_blank" class="howTo">How to use?</a>
+    <ul class="tab-list clearfloat">
+        <li class="tab-itom">
+            <input type="radio" id="testTabRadio1" class="test-radio" name="tab" checked="checked">
+            <label class="test-label" for="testTabRadio1">Scrap Condition</label>
+            <div class="tab-box">
+               <iframe src="http://www.lynnhan.me/lineVis/scrapRate.html" frameborder="0"></iframe>
+
+
+            </div>
+        </li>
+        <li class="tab-itom">
+            <input type="radio" id="testTabRadio2" class="test-radio" name="tab">
+            <label class="test-label" for="testTabRadio2">First Pass Yield</label>
+            <div class="tab-box">
+               <iframe src="http://www.lynnhan.me/lineVis/firstYield.html" frameborder="0" seamless="seamless"></iframe>
+            </div>
+        </li>
+    </ul>
+   
+</body>
+
+</html>
+
